@@ -1,6 +1,6 @@
 #hot_sale {
-    width: (100%-40px); 
-    margin: 0px 20px;
+    width: 1150px; 
+    margin: 0px auto;
     margin-top: 11px;
     background-color: #F29F41;
     padding: 20px;
@@ -9,6 +9,7 @@
     position: relative;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 #hot_sale .fire {
