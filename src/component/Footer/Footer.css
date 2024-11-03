@@ -6,12 +6,16 @@
     border-top: 1px solid #ddd;
     text-align: left;
     color: white;
+    min-width: 1150px;
 }
 
 .footer-section {
-    flex: 1;
+    width: 1150px;
+    display: flex;
     padding: 0 15px;
     position: relative;
+    margin: 0px auto;
+    justify-content: space-between;
 }
 
 .footer-section h3 {

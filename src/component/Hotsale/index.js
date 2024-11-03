@@ -10,7 +10,7 @@ const images = {
 
 const Hotsale = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalItems = 8; // Total number of boxes
+  const totalItems = 8+2; // Total number of boxes
 
   // Fixed width for each box
   const boxWidth = 250; // Width of each box in pixels

@@ -10,8 +10,9 @@ const images = {
 const Footer = () => {
   return (
     <div id="footer">
+  <div className="footer-section">
   {/* Phần bên trái */}
-  <div className="footer-section left">
+  <div className="footer-section_left">
     <p>
       Thương hiệu uy tín số 1 Việt Nam các sản phẩm <br />
       bán tại shop được bảo hành lên tới 18 tháng <br />
@@ -27,7 +28,7 @@ const Footer = () => {
     </ul>
   </div>
   {/* Phần giữa */}
-  <div className="footer-section center">
+  <div className="footer-section_center">
     <h3>Thông tin</h3>
     <ul>
       <li>Giới thiệu</li>
@@ -39,7 +40,7 @@ const Footer = () => {
     </ul>
   </div>
   {/* Phần bên phải */}
-  <div className="footer-section right">
+  <div className="footer-section_right">
   <h3>Kết nối với chúng tôi</h3>
   <ul className="social-icons">
     <li>
@@ -58,6 +59,7 @@ const Footer = () => {
       </a>
     </li>
   </ul>
+</div>
 </div>
 
 

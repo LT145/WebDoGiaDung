@@ -1,8 +1,10 @@
 #baner {
-    width: calc(100% - 40px); 
+    width: 1150px; 
     display: block;
-    margin: 0px 20px;
+    margin: 0px auto;
     margin-top: 11px;
+    min-width: 1150px;
+    justify-content: center;
 }
 
 #baner .img_baner {
@@ -11,30 +13,30 @@
     border-radius: 20px;
 }
 
-.banner2 {
-    width: calc(50% - 25px); /* Corrected width calculation */
+#banner2 {
+    width: 1150px; /* Corrected width calculation */
     display: flex;
+    justify-content: center;
     align-items: center; 
     gap: 10px;
-    margin: 0px 20px;
+    margin: 0px auto;
     margin-top: 11px;
 }
 
-.banner2 img {
-    width: 100%; 
-    height: auto; 
+#banner2 .img_banner2 {
+    width: calc(50% - 5px);
     border-radius: 20px;
 }
 .banner3{
-    width: calc(100% - 40px); 
+    width: 1150px; 
     display: block;
-    margin: 0px 20px;
+    margin: -5px auto;
     margin-top: 11px;
 }
 
 .banner3 h3{
     margin-left: 5px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .banner3 img{

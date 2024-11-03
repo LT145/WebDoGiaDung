@@ -4,6 +4,7 @@
   box-sizing: border-box;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 html {
@@ -20,10 +21,11 @@ html {
   left: 0;
   z-index: 98;
   position: sticky;
+  min-width: 1150px;
 }
 
 .menu {
-  width: 100%; 
+  width: 1150px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +42,7 @@ html {
 }
 
 #location {
-  width: 14%;
+  width: 160px;
   height: 43px;
   margin-right: 5px;
   background-color: #F29F41;
@@ -72,7 +74,7 @@ html {
 }
 
 #header .search {
-  width: 24%;
+  width: 23%;
   height: 32px;
   border-radius: 20px;
   background-color: white;

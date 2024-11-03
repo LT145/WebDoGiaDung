@@ -5,9 +5,9 @@ import banner2 from './img/banner2.png';
 
 const Banner2 = () => {
   return (
-        <div className="banner2">
-        <img src={banner1} alt="" />
-        <img src={banner2} alt="" />
+        <div id="banner2">
+        <img className="img_banner2" src={banner1} alt="" />
+        <img className="img_banner2" src={banner2} alt="" />
         </div>
   );
 }
