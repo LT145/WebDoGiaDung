@@ -1,25 +1,36 @@
 {
   "files": {
-    "main.css": "/WebDoGiaDung/static/css/main.160a9f4e.css",
-    "main.js": "/WebDoGiaDung/static/js/main.5b3473ca.js",
+    "main.css": "/WebDoGiaDung/static/css/main.99a6a131.css",
+    "main.js": "/WebDoGiaDung/static/js/main.7758a454.js",
     "static/js/453.7f2a2713.chunk.js": "/WebDoGiaDung/static/js/453.7f2a2713.chunk.js",
+    "static/media/banner3.png": "/WebDoGiaDung/static/media/banner3.1ac53074987caaf74ccd.png",
     "static/media/fa-solid-900.ttf": "/WebDoGiaDung/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/banner.png": "/WebDoGiaDung/static/media/banner.62d33df2a7673a985776.png",
+    "static/media/banner2.png": "/WebDoGiaDung/static/media/banner2.61874ddbc68125366712.png",
+    "static/media/banner1.png": "/WebDoGiaDung/static/media/banner1.cd480f68c415fad5e30b.png",
     "static/media/fa-brands-400.ttf": "/WebDoGiaDung/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/WebDoGiaDung/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
     "static/media/fa-brands-400.woff2": "/WebDoGiaDung/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
     "static/media/fa-regular-400.ttf": "/WebDoGiaDung/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/noi-chien-khong-dau-philips-na130-00-6-2-lit.jpg": "/WebDoGiaDung/static/media/noi-chien-khong-dau-philips-na130-00-6-2-lit.d6a2a0e7ea0320d7b71a.jpg",
     "static/media/logo.png": "/WebDoGiaDung/static/media/logo.2b2180b643f3032b38c6.png",
+    "static/media/may-loc-nuoc-ro-nong-lanh.jpg": "/WebDoGiaDung/static/media/may-loc-nuoc-ro-nong-lanh.927be171c8f1c7c61d3c.jpg",
+    "static/media/noi-com-dien-tu-sunhouse-18-lit.jpg": "/WebDoGiaDung/static/media/noi-com-dien-tu-sunhouse-18-lit.4dd0db5b11ea378c82e5.jpg",
+    "static/media/smart-tivi-samsung-4k-crystal.jpg": "/WebDoGiaDung/static/media/smart-tivi-samsung-4k-crystal.95019b9937a6dea10ee4.jpg",
+    "static/media/dogiadung.png": "/WebDoGiaDung/static/media/dogiadung.0fe94ca9a07c857bcdc6.png",
+    "static/media/noichienkhongdau.png": "/WebDoGiaDung/static/media/noichienkhongdau.9f3a29176738aab6f50f.png",
     "static/media/fa-regular-400.woff2": "/WebDoGiaDung/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/midea.jpg": "/WebDoGiaDung/static/media/midea.addff4c483387b1acf74.jpg",
+    "static/media/tivi.png": "/WebDoGiaDung/static/media/tivi.42b17d69d98f24d143b2.png",
     "static/media/fa-v4compatibility.ttf": "/WebDoGiaDung/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/WebDoGiaDung/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
-    "static/media/logo.svg": "/WebDoGiaDung/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/WebDoGiaDung/index.html",
-    "main.160a9f4e.css.map": "/WebDoGiaDung/static/css/main.160a9f4e.css.map",
-    "main.5b3473ca.js.map": "/WebDoGiaDung/static/js/main.5b3473ca.js.map",
+    "main.99a6a131.css.map": "/WebDoGiaDung/static/css/main.99a6a131.css.map",
+    "main.7758a454.js.map": "/WebDoGiaDung/static/js/main.7758a454.js.map",
     "453.7f2a2713.chunk.js.map": "/WebDoGiaDung/static/js/453.7f2a2713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.160a9f4e.css",
-    "static/js/main.5b3473ca.js"
+    "static/css/main.99a6a131.css",
+    "static/js/main.7758a454.js"
   ]
 }
