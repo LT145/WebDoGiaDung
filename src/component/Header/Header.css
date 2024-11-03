@@ -19,7 +19,7 @@ html {
   top: 0;
   left: 0;
   z-index: 98;
-  position: fixed;
+  position: sticky;
 }
 
 .menu {
@@ -40,11 +40,11 @@ html {
 }
 
 #location {
-  width: 196px;
+  width: 14%;
   height: 43px;
+  margin-right: 5px;
   background-color: #F29F41;
   border-radius: 20px;
-  margin-left: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -52,7 +52,7 @@ html {
 #location .icon_location {
   display: flex;
   align-items: center;
-  gap: 15px; /* Khoảng cách ảnh và văn bản */
+  gap: 5px; /* Khoảng cách ảnh và văn bản */
   color: white;
   font-size: 14px;
   text-align: left;
@@ -72,10 +72,8 @@ html {
 }
 
 #header .search {
-  width: 321px;
+  width: 24%;
   height: 32px;
-  margin-left: 15px;
-  margin-top: 5px;
   border-radius: 20px;
   background-color: white;
   position: relative;
@@ -150,10 +148,9 @@ html {
   font-size: 18px; 
 }
 #user {
-  width: 160px;
+  width: 11%;
   height: 43px; 
   background-color: #F29F41;
-  margin-left: 10px; 
   padding: 0 10px; 
 }
 
