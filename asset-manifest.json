@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WebDoGiaDung/static/css/main.01bfa85e.css",
-    "main.js": "/WebDoGiaDung/static/js/main.0adae5ff.js",
+    "main.css": "/WebDoGiaDung/static/css/main.2081c2c9.css",
+    "main.js": "/WebDoGiaDung/static/js/main.18929c57.js",
     "static/js/453.7f2a2713.chunk.js": "/WebDoGiaDung/static/js/453.7f2a2713.chunk.js",
     "static/media/banner3.png": "/WebDoGiaDung/static/media/banner3.1ac53074987caaf74ccd.png",
     "static/media/fa-solid-900.ttf": "/WebDoGiaDung/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
@@ -25,12 +25,12 @@
     "static/media/fa-v4compatibility.ttf": "/WebDoGiaDung/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/WebDoGiaDung/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/WebDoGiaDung/index.html",
-    "main.01bfa85e.css.map": "/WebDoGiaDung/static/css/main.01bfa85e.css.map",
-    "main.0adae5ff.js.map": "/WebDoGiaDung/static/js/main.0adae5ff.js.map",
+    "main.2081c2c9.css.map": "/WebDoGiaDung/static/css/main.2081c2c9.css.map",
+    "main.18929c57.js.map": "/WebDoGiaDung/static/js/main.18929c57.js.map",
     "453.7f2a2713.chunk.js.map": "/WebDoGiaDung/static/js/453.7f2a2713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01bfa85e.css",
-    "static/js/main.0adae5ff.js"
+    "static/css/main.2081c2c9.css",
+    "static/js/main.18929c57.js"
   ]
 }
