@@ -161,3 +161,42 @@ html {
   font-size: 30px; 
   margin-right: 5px; 
 }
+#location {
+  position: relative;
+}
+
+.icon_location {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon_location p {
+  margin: 0;
+  padding-left: 8px;
+}
+
+.location_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.location_dropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.location_dropdown li:hover,
+.location_dropdown li.active {
+  background-color: #f0f0f0;
+}

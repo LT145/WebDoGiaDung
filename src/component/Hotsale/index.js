@@ -1,21 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hotsale.css';
 
-const images = {
-  image1: require('./img/aqua-88-kg.jpg'),
-  image2: require('./img/may-loc-nuoc-ro-nong-lanh.jpg'),
-  image3: require('./img/smart-tivi-samsung-4k-crystal.jpg'),
-  image4: require('./img/midea.jpg'),
-};
-
 const Hotsale = () => {
+  const [hotsaleData, setHotsaleData] = useState([]); // Khởi tạo state để lưu dữ liệu Hotsale
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalItems = 8+2; // Total number of boxes
 
-  // Fixed width for each box
-  const boxWidth = 250; // Width of each box in pixels
-  const marginInPixels = 15; // Margin between items in pixels
-  const itemsPerSlide = Math.floor((window.innerWidth - 20) / (boxWidth + marginInPixels * 2)); // Calculate how many boxes fit in the viewport
+  useEffect(() => {
+    const fetchHotsales = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/hotsales'); // Lấy dữ liệu từ backend
+        const data = await response.json();
+        setHotsaleData(data); // Cập nhật state với dữ liệu lấy được
+      } catch (error) {
+        console.error('Error fetching hotsales:', error);
+      }
+    };
+
+    fetchHotsales();
+  }, []); // Chạy một lần khi component mount
+
+  const totalItems = hotsaleData.length;
+
+  const boxWidth = 250;
+  const marginInPixels = 15;
+  const itemsPerSlide = Math.floor((window.innerWidth - 20) / (boxWidth + marginInPixels * 2));
 
   const nextSlide = () => {
     if (currentIndex < totalItems - itemsPerSlide) {
@@ -29,64 +37,12 @@ const Hotsale = () => {
     }
   };
 
-  const boxes = [
-    {
-      sale: 'Giảm 35%',
-      img: images.image1,
-      name: 'Aqua 8.8 Kg AQW-FR88GT.BK',
-      price1: '5.190.000 đ',
-      price2: '8.090.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image2,
-      name: 'Máy lọc nước RO nóng nguội lạnh Sunhouse UltraPURE SHA76222KL 11 lõi',
-      price1: '6.590.000 đ',
-      price2: '10.590.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image3,
-      name: 'Samsung Smart TV UA70DU7000',
-      price1: '14.900.000 đ',
-      price2: '24.990.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image4,
-      name: 'Máy hút bụi cầm tay Midea MVC-SC861B',
-      price1: '690.000 đ',
-      price2: '1.090.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image1,
-      name: 'Aqua 8.8 Kg AQW-FR88GT.BK',
-      price1: '5.190.000 đ',
-      price2: '8.090.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image2,
-      name: 'Máy lọc nước RO nóng nguội lạnh Sunhouse UltraPURE SHA76222KL 11 lõi',
-      price1: '6.590.000 đ',
-      price2: '10.590.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image3,
-      name: 'Samsung Smart TV UA70DU7000',
-      price1: '14.900.000 đ',
-      price2: '24.990.000 đ',
-    },
-    {
-      sale: 'Giảm 35%',
-      img: images.image4,
-      name: 'Máy hút bụi cầm tay Midea MVC-SC861B',
-      price1: '690.000 đ',
-      price2: '1.090.000 đ',
-    },
-  ];
+  const calculateSale = (priceOld, priceNew) => {
+    const oldPrice = parseInt(priceOld.replace(/\./g, '').replace(' đ', ''));
+    const newPrice = parseInt(priceNew.replace(/\./g, '').replace(' đ', ''));
+    const discount = ((oldPrice - newPrice) / oldPrice) * 100;
+    return `Giảm ${Math.round(discount)}%`;
+  };
 
   return (
     <div id="hot_sale">
@@ -99,16 +55,16 @@ const Hotsale = () => {
           className="box_container"
           style={{ transform: `translateX(-${(currentIndex * (boxWidth + marginInPixels))}px)` }}
         >
-          {boxes.map((item, index) => (
+          {hotsaleData.map((item, index) => (
             <div className="box" key={index}>
-              <div className="sale">{item.sale}</div>
-              <img src={item.img} alt={item.name} />
+              <div className="sale">{calculateSale(item.priceOld, item.priceNew)}</div>
+              <img src={require(`${item.imgSrc}`)} alt={item.name} />
               <a href="#" className="name">
                 {item.name}
               </a>
               <div className="money_sale">
-                <p className="gia_1">{item.price1}</p>
-                <p className="gia_2">{item.price2}</p>
+                <p className="gia_1">{item.priceNew}</p>
+                <p className="gia_2">{item.priceOld}</p>
               </div>
               <div className="star">
                 <i className="fa-solid fa-star" />
