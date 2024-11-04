@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './Hotsale.css';
-import hotsaleData from './Hotsales.json'; // Import file JSON
 
 const Hotsale = () => {
+  const [hotsaleData, setHotsaleData] = useState([]); // Khởi tạo state để lưu dữ liệu Hotsale
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalItems = hotsaleData.length; // Lấy số lượng sản phẩm từ JSON
 
-  // Fixed width for each box
-  const boxWidth = 250; // Width of each box in pixels
-  const marginInPixels = 15; // Margin between items in pixels
-  const itemsPerSlide = Math.floor((window.innerWidth - 20) / (boxWidth + marginInPixels * 2)); // Calculate how many boxes fit in the viewport
+  useEffect(() => {
+    const fetchHotsales = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/hotsales'); // Lấy dữ liệu từ backend
+        const data = await response.json();
+        setHotsaleData(data); // Cập nhật state với dữ liệu lấy được
+      } catch (error) {
+        console.error('Error fetching hotsales:', error);
+      }
+    };
+
+    fetchHotsales();
+  }, []); // Chạy một lần khi component mount
+
+  const totalItems = hotsaleData.length;
+
+  const boxWidth = 250;
+  const marginInPixels = 15;
+  const itemsPerSlide = Math.floor((window.innerWidth - 20) / (boxWidth + marginInPixels * 2));
 
   const nextSlide = () => {
     if (currentIndex < totalItems - itemsPerSlide) {
@@ -23,9 +37,7 @@ const Hotsale = () => {
     }
   };
 
-  // Hàm tính phần trăm giảm giá
   const calculateSale = (priceOld, priceNew) => {
-    // Chuyển đổi giá từ định dạng "X.XXX.XXX đ" sang số nguyên
     const oldPrice = parseInt(priceOld.replace(/\./g, '').replace(' đ', ''));
     const newPrice = parseInt(priceNew.replace(/\./g, '').replace(' đ', ''));
     const discount = ((oldPrice - newPrice) / oldPrice) * 100;

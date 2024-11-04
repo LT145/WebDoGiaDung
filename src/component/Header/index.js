@@ -2,23 +2,37 @@ import React, { useState, useEffect } from 'react';
 import './Header.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import logo from './img/logo.png'; // Ensure the path is correct
-import locationsData from './Locations.json';
 
 
 const Nav = () => {
-  const [currentLocation, setCurrentLocation] = useState('Hồ Chí Minh'); // Vị trí mặc định
-  const [isDropdownOpen, setDropdownOpen] = useState(false); // Trạng thái dropdown
+  
+  const [currentLocation, setCurrentLocation] = useState('Hồ Chí Minh');
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [locationsData, setLocationsData] = useState([]); // Khởi tạo state để lưu dữ liệu locations
 
-  // Khi nhấn vào mũi tên, mở hoặc đóng dropdown
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  // Khi chọn một vị trí mới
   const handleLocationChange = (location) => {
     setCurrentLocation(location);
-    setDropdownOpen(false); // Đóng dropdown sau khi chọn
-  }; 
+    setDropdownOpen(false);
+  };
+
+  // Lấy dữ liệu locations từ API
+  useEffect(() => {
+    const fetchLocations = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/locations');
+        const data = await response.json();
+        setLocationsData(data); // Cập nhật state với dữ liệu lấy được
+      } catch (error) {
+        console.error('Error fetching locations:', error);
+      }
+    };
+
+    fetchLocations();
+  }, []); // Chạy một lần khi component mount
   return (
     <div id="header">
   <div className="menu">
